@@ -66,7 +66,9 @@ const CenteredImageBox = styled(Box)({
   margin: "1rem 0",
 });
 
-const imageUrl = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
+// ✅ Ruta segura para producción
+const imageUrl = (name: string) =>
+  `${import.meta.env.BASE_URL || "/"}images/${name}`;
 
 // 🧠 Datos de áreas
 const secciones = [
@@ -111,20 +113,12 @@ export default function Distribucion() {
     <Container>
       {/* Encabezado */}
       <Header>
-        <Logo
-         
-          src={`${import.meta.env.BASE_URL}/tecnm.png`}
-          alt="Logo TecNM"
-        />
+        <Logo src={`${import.meta.env.BASE_URL || "/"}tecnm.png`} alt="Logo TecNM" />
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo
-          
-          src={`${import.meta.env.BASE_URL}/esctec.png`}
-          alt="Escudo ITS"
-        />
+        <Logo src={`${import.meta.env.BASE_URL || "/"}esctec.png`} alt="Escudo ITS" />
       </Header>
 
       {/* Título principal */}
