@@ -1,4 +1,5 @@
 import { Box, Typography, styled } from "@mui/material";
+import { useState } from "react";
 
 // 🧱 Estilos
 const Container = styled(Box)({
@@ -12,11 +13,6 @@ const Header = styled(Box)({
   alignItems: "center",
   justifyContent: "space-between",
   marginBottom: "30px",
-});
-
-const Logo = styled("img")({
-  width: "100px",
-  height: "auto",
 });
 
 const TitleBox = styled(Box)({
@@ -42,12 +38,6 @@ const CenteredImageBox = styled(Box)({
   marginBottom: "20px",
 });
 
-const MainImage = styled("img")({
-  maxWidth: "100%",
-  height: "auto",
-  borderRadius: "10px",
-});
-
 const Text = styled(Typography)({
   fontSize: "1rem",
   marginTop: "0.5rem",
@@ -65,27 +55,67 @@ const Footer = styled(Box)({
   textAlign: "center",
 });
 
+// ✅ Imagen con fallback si falla la carga
+const StyledImage = styled("img")({
+  width: "100px",
+  height: "auto",
+});
+
+const MainImageStyled = styled("img")({
+  maxWidth: "100%",
+  height: "auto",
+  borderRadius: "10px",
+});
+
+function ImageWithFallback({ src, alt, ...props }: any) {
+  const [imgSrc, setImgSrc] = useState(src);
+  const fallback = `${import.meta.env.BASE_URL}fallback.png`;
+
+  return (
+    <img
+      {...props}
+      src={imgSrc}
+      alt={alt}
+      onError={() => {
+        setImgSrc(fallback);
+        console.error(`❌ No se pudo cargar la imagen: ${src}`);
+      }}
+    />
+  );
+}
+
 export default function Home() {
   return (
     <Container>
       {/* 🧭 Header */}
       <Header>
-      <Logo src={`${import.meta.env.BASE_URL}tecnm.png`} alt="Logo TecNM" />
-        
+        <StyledImage
+          as={ImageWithFallback}
+          src={`${import.meta.env.BASE_URL}/tecnm.png`}
+          alt="Logo TecNM"
+        />
+
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src="my-react-app/dist/esctec.png" alt="Logo TecNM" />
-        
+
+        <StyledImage
+          as={ImageWithFallback}
+          src={`${import.meta.env.BASE_URL}esctec.png`}
+          alt="Logo ESC Tec"
+        />
       </Header>
 
       {/* 🏠 Página de Inicio */}
       <SectionHeader>🏠 Página de Inicio</SectionHeader>
 
       <CenteredImageBox>
-        <MainImage src="my-react-app/public/laboratorio.jpeg
-      " alt="Imagen Tec Saltillo" />
+        <MainImageStyled
+          as={ImageWithFallback}
+          src={`${import.meta.env.BASE_URL}laboratorio.jpeg`}
+          alt="Imagen Tec Saltillo"
+        />
       </CenteredImageBox>
 
       {/* ✏️ Opinión General */}
@@ -95,32 +125,31 @@ export default function Home() {
         <Text>Otro aspecto importante es la diversidad de actividades extracurriculares...</Text>
       </Section>
 
-   {/* 🎯 Misión */}
-<Section>
-  <Typography variant="h6" color="primary" sx={{ marginTop: "1.5rem" }}>
-    🎯 Misión
-  </Typography>
-  <Text>
-    La misión de nuestra universidad es formar profesionales comprometidos con la sociedad, capaces de generar soluciones innovadoras a los desafíos globales, promoviendo la excelencia académica, la investigación y el desarrollo integral de los estudiantes.
-  </Text>
-  <Text>
-    Fomentamos una educación inclusiva, ética y sostenible, basada en valores de respeto, responsabilidad social y liderazgo, preparando a nuestros graduados para el éxito en el ámbito laboral y la contribución al bienestar colectivo.
-  </Text>
-</Section>
+      {/* 🎯 Misión */}
+      <Section>
+        <Typography variant="h6" color="primary" sx={{ marginTop: "1.5rem" }}>
+          🎯 Misión
+        </Typography>
+        <Text>
+          La misión de nuestra universidad es formar profesionales comprometidos con la sociedad, capaces de generar soluciones innovadoras a los desafíos globales, promoviendo la excelencia académica, la investigación y el desarrollo integral de los estudiantes.
+        </Text>
+        <Text>
+          Fomentamos una educación inclusiva, ética y sostenible, basada en valores de respeto, responsabilidad social y liderazgo, preparando a nuestros graduados para el éxito en el ámbito laboral y la contribución al bienestar colectivo.
+        </Text>
+      </Section>
 
-{/* 🌟 Visión */}
-<Section>
-  <Typography variant="h6" color="primary" sx={{ marginTop: "1.5rem" }}>
-    🌟 Visión
-  </Typography>
-  <Text>
-    Ser una universidad de referencia nacional e internacional, reconocida por la calidad de su enseñanza, su capacidad de innovación, y su contribución al desarrollo científico, cultural y social.
-  </Text>
-  <Text>
-    Aspiramos a ser un espacio académico inclusivo, donde se promueva la formación integral de nuestros estudiantes, preparando líderes comprometidos con la solución de problemas globales en un entorno globalizado y cambiante.
-  </Text>
-</Section>
-
+      {/* 🌟 Visión */}
+      <Section>
+        <Typography variant="h6" color="primary" sx={{ marginTop: "1.5rem" }}>
+          🌟 Visión
+        </Typography>
+        <Text>
+          Ser una universidad de referencia nacional e internacional, reconocida por la calidad de su enseñanza, su capacidad de innovación, y su contribución al desarrollo científico, cultural y social.
+        </Text>
+        <Text>
+          Aspiramos a ser un espacio académico inclusivo, donde se promueva la formación integral de nuestros estudiantes, preparando líderes comprometidos con la solución de problemas globales en un entorno globalizado y cambiante.
+        </Text>
+      </Section>
 
       {/* 📞 Footer */}
       <Footer>
