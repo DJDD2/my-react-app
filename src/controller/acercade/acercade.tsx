@@ -124,7 +124,7 @@ export default function AcercaDe() {
         />
       </CenteredImageBox>
 
-      <Title>🔧 Cambios en el Laboratorio</Title>
+      <Title>🔧 Cambios en Laboratorio</Title>
 
       <SubTitle>🛠️ Mantenimiento</SubTitle>
       <Text>
