@@ -83,7 +83,7 @@ export default function Home() {
       <SectionHeader>🏠 Página de Inicio</SectionHeader>
 
       <CenteredImageBox>
-        <MainImage src="my-react-app/public/images/imagen_tec.png" alt="Imagen Tec Saltillo" />
+        <MainImage src="my-react-app/public/1.jpg" alt="Imagen Tec Saltillo" />
       </CenteredImageBox>
 
       {/* ✏️ Opinión General */}
