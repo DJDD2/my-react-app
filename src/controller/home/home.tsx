@@ -70,7 +70,7 @@ export default function Home() {
     <Container>
       {/* 🧭 Header */}
       <Header>
-      <Logo src="my-react-app/public/tecnm.png" alt="Logo TecNM" />
+      <Logo src="/tecnm.png" alt="Logo TecNM" />
         
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
