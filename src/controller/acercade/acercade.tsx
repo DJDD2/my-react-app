@@ -1,17 +1,10 @@
-
 import { Box, Typography, styled } from "@mui/material";
 
-// Estilos necesarios
+// Estilos
 const Container = styled(Box)({
   padding: "2rem",
   backgroundColor: "#f0f0f0",
   minHeight: "80vh",
-});
-
-const StyledMainImage = styled("img")({
-  width: "700px",
-  height: "auto",
-  borderRadius: "10px",
 });
 
 const Header = styled(Box)({
@@ -65,7 +58,7 @@ const Title = styled(Typography)({
 
 const SubTitle = styled(Typography)({
   fontSize: "1.4rem",
-  fontWeight: "600",
+  fontWeight: 600,
   marginTop: "1.5rem",
   color: "#333",
 });
@@ -80,18 +73,24 @@ export default function AcercaDe() {
   return (
     <Container>
       <Header>
-        <Logo src="images/tecnm.png" alt="Logo TecNM" />
+        <Logo src={`${import.meta.env.BASE_URL}tecnm.png`} alt="Logo TecNM" />
+
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src="images/esctec.png" alt="Escudo ITS" />
+
+        <Logo src={`${import.meta.env.BASE_URL}esctec.png`} alt="Logo ESC Tec" />
       </Header>
 
-      <SectionHeader>🏠 Laboratorio de Metalugia</SectionHeader>
+      {/* 🏠 Página de Inicio */}
+      <SectionHeader>🏠 Página de Inicio</SectionHeader>
 
       <CenteredImageBox>
-        <StyledMainImage src="images/placa.jpg" alt="ImagenTec" />
+        <ImageStyled
+          src={`${import.meta.env.BASE_URL}laboratorio.jpeg`}
+          alt="Imagen Tec Saltillo"
+        />
       </CenteredImageBox>
 
       <Title>🔧 Cambios en el Laboratorio</Title>
@@ -120,7 +119,7 @@ export default function AcercaDe() {
       <SubTitle>📅 Acreditación</SubTitle>
       <Text>En 2016 se obtuvo la acreditación ABET, lo cual implicó adecuaciones importantes al laboratorio.</Text>
 
-      <SubTitle>🖼️ Galería AREA DE TRABAJO </SubTitle>
+      <SubTitle>🖼️ Galería AREA DE TRABAJO</SubTitle>
 
       {/* Galería con Flexbox */}
       <Box
@@ -148,7 +147,10 @@ export default function AcercaDe() {
               textAlign: "center",
             }}
           >
-            <ImageStyled src={img.src} alt={img.alt} />
+            <ImageStyled
+              src={`${import.meta.env.BASE_URL}${img.src}`}
+              alt={img.alt}
+            />
           </Box>
         ))}
       </Box>

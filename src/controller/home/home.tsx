@@ -102,7 +102,7 @@ export default function Home() {
 
         <StyledImage
           as={ImageWithFallback}
-          src={`${import.meta.env.BASE_URL}esctec.png`}
+          src={`${import.meta.env.BASE_URL}/esctec.png`}
           alt="Logo ESC Tec"
         />
       </Header>
