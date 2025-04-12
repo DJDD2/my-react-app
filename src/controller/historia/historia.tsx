@@ -102,8 +102,6 @@ const HistoriaText = styled(Typography)({
   color: "#555",
 });
 
-
-
 // Componente principal
 const LaboratorioPage: React.FC = () => {
   return (
@@ -225,7 +223,6 @@ const LaboratorioPage: React.FC = () => {
           <li>✉️ Correo: aquintana@tecnm.mx</li>
           <li>📞 Extensión: 123</li>
           <li>Horario que se encuentra el encargado: 7:00am - 15:00pm</li>
-         
         </ul>
       </ContentBox>
 
