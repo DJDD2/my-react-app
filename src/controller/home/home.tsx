@@ -108,7 +108,7 @@ export default function Home() {
       </Header>
 
       {/* 🏠 Página de Inicio */}
-      <SectionHeader>🏠 Página de Inicio</SectionHeader>
+      <SectionHeader>🏠 Página de inicio </SectionHeader>
 
       <CenteredImageBox>
         <MainImageStyled
