@@ -73,14 +73,14 @@ export default function AcercaDe() {
   return (
     <Container>
       <Header>
-        <Logo src={`${import.meta.env.BASE_URL}tecnm.png`} alt="Logo TecNM" />
+        <Logo src={`${import.meta.env.BASE_URL}/tecnm.png`} alt="Logo TecNM" />
 
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
 
-        <Logo src={`${import.meta.env.BASE_URL}esctec.png`} alt="Logo ESC Tec" />
+        <Logo src={`${import.meta.env.BASE_URL}/esctec.png`} alt="Logo ESC Tec" />
       </Header>
 
       {/* 🏠 Página de Inicio */}
@@ -88,7 +88,7 @@ export default function AcercaDe() {
 
       <CenteredImageBox>
         <ImageStyled
-          src={`${import.meta.env.BASE_URL}laboratorio.jpeg`}
+          src={`${import.meta.env.BASE_URL}/laboratorio.jpeg`}
           alt="Imagen Tec Saltillo"
         />
       </CenteredImageBox>
