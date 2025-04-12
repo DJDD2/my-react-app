@@ -52,13 +52,12 @@ const MachineBox = styled(Box)({
 });
 
 const ImageStyled = styled("img")({
-  width: "100%",
-  height: "240px",
-  objectFit: "cover",
+  width: "100%", // Se ajusta al contenedor
+  maxHeight: "300px", // Limita la altura máxima de las imágenes
+  objectFit: "cover", // Mantiene el aspecto de la imagen sin distorsionarla
   borderRadius: "6px",
   marginTop: "10px",
 });
-
 const CenteredImageBox = styled(Box)({
   display: "flex",
   flexDirection: "column",

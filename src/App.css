@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center; /* Centra el título */
   align-items: center;
-  background: #003366;
+  background-color: #003366;
   color: white;
   padding: 20px;
   position: relative;
@@ -14,21 +14,20 @@
   width: 80px; /* Ajusta el tamaño */
   height: auto;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .logo.left {
   left: 20px; /* Ubicación en la esquina izquierda */
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .logo.right {
   right: 20px; /* Ubicación en la esquina derecha */
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .title {
   text-align: center;
   font-size: 1.5rem;
+  margin: 0;
 }

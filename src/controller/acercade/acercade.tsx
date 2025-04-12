@@ -49,12 +49,14 @@ const ImageStyled = styled("img")({
   width: "100%",
   objectFit: "cover",
 });
-
 const MainImage = styled("img")({
-  maxWidth: "100%",
-  height: "auto",
-  borderRadius: "10px",
+  width: "100%", // Asegura que la imagen ocupe todo el ancho disponible
+  maxWidth: "600px", // Limita el ancho máximo (ajusta según lo que necesites)
+  height: "auto", // Mantiene la proporción original de la imagen
+  objectFit: "contain", // Ajusta la imagen sin distorsionarla
+  borderRadius: "6px", // Para bordes redondeados si lo prefieres
 });
+
 
 const Title = styled(Typography)({
   fontSize: "2rem",
