@@ -70,19 +70,19 @@ export default function Home() {
     <Container>
       {/* 🧭 Header */}
       <Header>
-        <Logo src="/images/tecnm.png" alt="Logo TecNM" />
+        <Logo src="./public/images/tecnm.png" alt="Logo TecNM" />
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src="/images/esctec.png" alt="Escudo ITS" />
+        <Logo src="./public/images/esctec.png" alt="Escudo ITS" />
       </Header>
 
       {/* 🏠 Página de Inicio */}
       <SectionHeader>🏠 Página de Inicio</SectionHeader>
 
       <CenteredImageBox>
-        <MainImage src="/images/imagen_tec.png" alt="Imagen Tec Saltillo" />
+        <MainImage src="./public/images/imagen_tec.png" alt="Imagen Tec Saltillo" />
       </CenteredImageBox>
 
       {/* ✏️ Opinión General */}

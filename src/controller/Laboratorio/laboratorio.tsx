@@ -6,19 +6,19 @@ const Laboratorio: React.FC = () => {
     <div className="container">
       {/* Header */}
       <header className="header">
-        <img className="logo left" src="/images/tecnm.png" alt="Logo TecNM" />
+        <img className="logo left" src="./images/tecnm.png" alt="Logo TecNM" />
         <div className="title">
           <h1>TECNOLOGICO NACIONAL DE MÉXICO</h1>
           <h1>INSTITUTO TECNOLÓGICO DE SALTILLO</h1>
         </div>
-        <img className="logo right" src="/images/esctec.png" alt="Escudo ITS" />
+        <img className="logo right" src="./images/esctec.png" alt="Escudo ITS" />
       </header>
 
       {/* Contenido Principal */}
       <main>
         <h2 className="hea">🏠 Página de Inicio</h2>
         <div className="cont">
-          <img src="/images/laboratorio.jpeg" className="main-image" alt="Imagen Tec Saltillo" />
+          <img src="./public/images/laboratorio.jpeg" className="main-image" alt="Imagen Tec Saltillo" />
         </div>
 
         <section>
