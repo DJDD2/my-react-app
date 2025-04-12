@@ -70,13 +70,13 @@ export default function Home() {
     <Container>
       {/* 🧭 Header */}
       <Header>
-      <Logo src="/tecnm.png" alt="Logo TecNM" />
+      <Logo src={`${import.meta.env.BASE_URL}tecnm.png`} alt="Logo TecNM" />
         
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src="my-react-app/public/esctec.png" alt="Logo TecNM" />
+        <Logo src="my-react-app/dist/esctec.png" alt="Logo TecNM" />
         
       </Header>
 
