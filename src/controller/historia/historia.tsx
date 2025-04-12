@@ -119,7 +119,10 @@ const LaboratorioPage: React.FC = () => {
       {/* Título principal */}
       <SectionHeader>🏠 Laboratorio de Metalurgia</SectionHeader>
       <CenteredImageBox>
-        <MainImage src={`${import.meta.env.BASE_URL}images/laboratorio.jpeg`} alt="Imagen del laboratorio" />
+        <MainImage
+          src={`${import.meta.env.BASE_URL}images/laboratorio.jpeg`}
+          alt="Imagen del laboratorio de metalurgia"
+        />
       </CenteredImageBox>
 
       {/* Misión / Visión */}
@@ -141,11 +144,18 @@ const LaboratorioPage: React.FC = () => {
 
       {/* Reglamento */}
       <ContentBox>
-        <HistoriaTitle>📘 REGLAMENTO DEL LABORATORIO</HistoriaTitle>
+        <HistoriaTitle>📘 Reglamento del Laboratorio</HistoriaTitle>
         <CenteredImageBox>
-          <MainImage src={`${import.meta.env.BASE_URL}images/reglamento.JPG`} alt="Normas visibles dentro del laboratorio" />
+          <MainImage
+            src={`${import.meta.env.BASE_URL}images/reglamento.JPG`}
+            alt="Ejemplo del reglamento dentro del laboratorio"
+          />
         </CenteredImageBox>
-        <Typography align="center" variant="body2" sx={{ color: "#666", marginBottom: "2rem" }}>
+        <Typography
+          align="center"
+          variant="body2"
+          sx={{ color: "#666", marginBottom: "2rem" }}
+        >
           Ejemplo del reglamento colocado en el laboratorio
         </Typography>
       </ContentBox>
@@ -182,7 +192,10 @@ const LaboratorioPage: React.FC = () => {
         <ul>
           <li><HistoriaText>Metales</HistoriaText></li>
           <CenteredImageBox>
-            <MainImage src={`${import.meta.env.BASE_URL}images/metal.png`} alt="Ejemplo de Metales" />
+            <MainImage
+              src={`${import.meta.env.BASE_URL}images/metal.png`}
+              alt="Muestra de metales"
+            />
           </CenteredImageBox>
           <Typography align="center" variant="body2" sx={{ color: "#666", marginBottom: "2rem" }}>
             Ejemplo de Metales
@@ -190,7 +203,10 @@ const LaboratorioPage: React.FC = () => {
 
           <li><HistoriaText>Polímeros</HistoriaText></li>
           <CenteredImageBox>
-            <MainImage src={`${import.meta.env.BASE_URL}images/polimero.jpg`} alt="Ejemplo de Polímeros" />
+            <MainImage
+              src={`${import.meta.env.BASE_URL}images/polimero.jpg`}
+              alt="Ejemplo de polímeros"
+            />
           </CenteredImageBox>
           <Typography align="center" variant="body2" sx={{ color: "#666", marginBottom: "2rem" }}>
             Ejemplo de Polímeros
@@ -198,7 +214,10 @@ const LaboratorioPage: React.FC = () => {
 
           <li><HistoriaText>Cerámicas</HistoriaText></li>
           <CenteredImageBox>
-            <MainImage src={`${import.meta.env.BASE_URL}images/ceramica.jpg`} alt="Ejemplo de Cerámicas" />
+            <MainImage
+              src={`${import.meta.env.BASE_URL}images/ceramica.jpg`}
+              alt="Ejemplo de cerámicas"
+            />
           </CenteredImageBox>
           <Typography align="center" variant="body2" sx={{ color: "#666", marginBottom: "2rem" }}>
             Ejemplo de Cerámicas
@@ -217,18 +236,18 @@ const LaboratorioPage: React.FC = () => {
 
       {/* Encargado */}
       <ContentBox>
-        <Subtitle>ENCARGADO</Subtitle>
+        <Subtitle>Encargado</Subtitle>
         <ul>
           <li>👤 Nombre: Alejandro Quintana</li>
           <li>✉️ Correo: aquintana@tecnm.mx</li>
           <li>📞 Extensión: 123</li>
-          <li>Horario que se encuentra el encargado: 7:00am - 15:00pm</li>
+          <li>🕒 Horario: 7:00am - 3:00pm</li>
         </ul>
       </ContentBox>
 
       {/* Materias impartidas */}
       <ContentBox>
-        <Subtitle>MATERIAS IMPARTIDAS EN LOS LABORATORIOS</Subtitle>
+        <Subtitle>Materias Impartidas en los Laboratorios</Subtitle>
         <ul>
           <li>Procesos de Manufactura</li>
           <li>Metal-Mecánica Avanzada</li>
@@ -238,10 +257,10 @@ const LaboratorioPage: React.FC = () => {
 
       {/* Footer */}
       <Footer>
-        <Typography variant="h6">CONTÁCTANOS</Typography>
-        <Typography>Teléfono: 844 288 9460</Typography>
+        <Typography variant="h6">Contáctanos</Typography>
+        <Typography>📞 Teléfono: 844 288 9460</Typography>
         <Typography>
-          Correo:{" "}
+          ✉️ Correo:{" "}
           <ContactLink href="mailto:se_saltillo@tecnm.mx">
             se_saltillo@tecnm.mx
           </ContactLink>
