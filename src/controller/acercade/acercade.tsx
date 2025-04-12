@@ -51,7 +51,7 @@ const ImageStyled = styled("img")({
 });
 const MainImage = styled("img")({
   width: "100%", // Asegura que la imagen ocupe todo el ancho disponible
-  maxWidth: "600px", // Limita el ancho máximo (ajusta según lo que necesites)
+  maxWidth: "200px", // Limita el ancho máximo (ajusta según lo que necesites)
   height: "auto", // Mantiene la proporción original de la imagen
   objectFit: "contain", // Ajusta la imagen sin distorsionarla
   borderRadius: "6px", // Para bordes redondeados si lo prefieres
