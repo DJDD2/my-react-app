@@ -1,11 +1,11 @@
 import { Box, Typography, styled } from "@mui/material";
 import { useState } from "react";
 
-// 🧱 Estilos
+// Estilos
 const Container = styled(Box)({
   padding: "2rem",
   backgroundColor: "#f0f0f0",
-  minHeight: "100vh",
+  minHeight: "80vh",
 });
 
 const Header = styled(Box)({
@@ -15,14 +15,19 @@ const Header = styled(Box)({
   marginBottom: "30px",
 });
 
+const Logo = styled("img")({
+  width: "100px",
+  height: "auto",
+});
+
 const TitleBox = styled(Box)({
   textAlign: "center",
 });
 
 const TitleText = styled(Typography)({
+  margin: "5px 0",
   fontSize: "1.2rem",
   fontWeight: "bold",
-  margin: "5px 0",
   color: "#333",
 });
 
@@ -35,7 +40,34 @@ const SectionHeader = styled(Typography)({
 const CenteredImageBox = styled(Box)({
   display: "flex",
   justifyContent: "center",
+  alignItems: "center",
   marginBottom: "20px",
+});
+
+const ImageStyled = styled("img")({
+  height: "100%",
+  width: "100%",
+  objectFit: "cover",
+});
+
+const MainImage = styled("img")({
+  maxWidth: "100%",
+  height: "auto",
+  borderRadius: "10px",
+});
+
+const Title = styled(Typography)({
+  fontSize: "2rem",
+  fontWeight: "bold",
+  marginBottom: "1rem",
+  color: "#800020",
+});
+
+const SubTitle = styled(Typography)({
+  fontSize: "1.4rem",
+  fontWeight: 600,
+  marginTop: "1.5rem",
+  color: "#333",
 });
 
 const Text = styled(Typography)({
@@ -44,29 +76,7 @@ const Text = styled(Typography)({
   color: "#555",
 });
 
-const Section = styled(Box)({
-  marginTop: "1.5rem",
-});
-
-const Footer = styled(Box)({
-  marginTop: "3rem",
-  paddingTop: "1rem",
-  borderTop: "1px solid #ccc",
-  textAlign: "center",
-});
-
-// ✅ Imagen con fallback si falla la carga
-const StyledImage = styled("img")({
-  width: "100px",
-  height: "auto",
-});
-
-const MainImageStyled = styled("img")({
-  maxWidth: "100%",
-  height: "auto",
-  borderRadius: "10px",
-});
-
+// Imagen con fallback
 function ImageWithFallback({ src, alt, ...props }: any) {
   const [imgSrc, setImgSrc] = useState(src);
   const fallback = `${import.meta.env.BASE_URL}fallback.png`;
@@ -84,83 +94,113 @@ function ImageWithFallback({ src, alt, ...props }: any) {
   );
 }
 
-export default function acercade() {
+export default function AcercaDe() {
   return (
     <Container>
-      {/* 🧭 Header */}
       <Header>
-        <StyledImage
+        <Logo
           as={ImageWithFallback}
-          src={`${import.meta.env.BASE_URL}/tecnm.png`}
+          src={`${import.meta.env.BASE_URL}images/tecnm.png`}
           alt="Logo TecNM"
         />
-
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-
-        <StyledImage
+        <Logo
           as={ImageWithFallback}
-          src={`${import.meta.env.BASE_URL}/esctec.png`}
-          alt="Logo ESC Tec"
+          src={`${import.meta.env.BASE_URL}images/esctec.png`}
+          alt="Escudo ITS"
         />
       </Header>
 
-      {/* 🏠 Página de Inicio */}
-      <SectionHeader>🏠 Página de Inicio</SectionHeader>
+      <SectionHeader>🏠 Laboratorio de Metalurgia</SectionHeader>
 
       <CenteredImageBox>
-        <MainImageStyled
+        <MainImage
           as={ImageWithFallback}
-          src={`${import.meta.env.BASE_URL}laboratorio.jpeg`}
-          alt="Imagen Tec Saltillo"
+          src={`${import.meta.env.BASE_URL}images/placa.jpg`}
+          alt="Placa del laboratorio"
         />
       </CenteredImageBox>
 
-      {/* ✏️ Opinión General */}
-      <Section>
-        <Text>Estudiar en el Tec Saltillo es una experiencia única...</Text>
-        <Text>Los profesores son uno de los grandes puntos fuertes de la institución...</Text>
-        <Text>Otro aspecto importante es la diversidad de actividades extracurriculares...</Text>
-      </Section>
+      <Title>🔧 Cambios en el Laboratorio</Title>
 
-      {/* 🎯 Misión */}
-      <Section>
-        <Typography variant="h6" color="primary" sx={{ marginTop: "1.5rem" }}>
-          🎯 Misión
-        </Typography>
-        <Text>
-          La misión de nuestra universidad es formar profesionales comprometidos con la sociedad, capaces de generar soluciones innovadoras a los desafíos globales, promoviendo la excelencia académica, la investigación y el desarrollo integral de los estudiantes.
-        </Text>
-        <Text>
-          Fomentamos una educación inclusiva, ética y sostenible, basada en valores de respeto, responsabilidad social y liderazgo, preparando a nuestros graduados para el éxito en el ámbito laboral y la contribución al bienestar colectivo.
-        </Text>
-      </Section>
+      <SubTitle>🛠️ Mantenimiento</SubTitle>
+      <Text>
+        Se realiza mantenimiento constante en el taller, ya que la adquisición
+        de nuevo material representa un alto costo. Esto permite extender la
+        vida útil del equipo existente.
+      </Text>
 
-      {/* 🌟 Visión */}
-      <Section>
-        <Typography variant="h6" color="primary" sx={{ marginTop: "1.5rem" }}>
-          🌟 Visión
-        </Typography>
-        <Text>
-          Ser una universidad de referencia nacional e internacional, reconocida por la calidad de su enseñanza, su capacidad de innovación, y su contribución al desarrollo científico, cultural y social.
-        </Text>
-        <Text>
-          Aspiramos a ser un espacio académico inclusivo, donde se promueva la formación integral de nuestros estudiantes, preparando líderes comprometidos con la solución de problemas globales en un entorno globalizado y cambiante.
-        </Text>
-      </Section>
+      <SubTitle>👥 Personal Clave</SubTitle>
+      <ul>
+        <li>
+          <Text>👨‍🔧 Técnico: Alejandro Quintana</Text>
+        </li>
+        <li>
+          <Text>🧑‍💻 Soporte: Marcos Hernández</Text>
+        </li>
+      </ul>
 
-      {/* 📞 Footer */}
-      <Footer>
-        <Typography variant="h6">CONTÁCTANOS</Typography>
-        <Text>Teléfono: 844 288 9460</Text>
-        <Text>
-          Correo:{" "}
-          <a href="mailto:se_saltillo@tecnm.mx">se_saltillo@tecnm.mx</a>
-        </Text>
-        <Text>Dirección: Avenida Universidad No. 123, Saltillo, Coahuila</Text>
-      </Footer>
+      <SubTitle>📍 Estado del Laboratorio</SubTitle>
+      <Text>
+        Todas las áreas del laboratorio actualmente se encuentran habilitadas y
+        en funcionamiento.
+      </Text>
+
+      <SubTitle>💰 Equipos de Alto Costo</SubTitle>
+      <ul>
+        <li>
+          <Text>Molino laminador — Valor aproximado: $7 millones</Text>
+        </li>
+        <li>
+          <Text>Muflas y medidores de temperatura — También implican altos costos</Text>
+        </li>
+      </ul>
+
+      <SubTitle>📅 Acreditación</SubTitle>
+      <Text>
+        En 2016 se obtuvo la acreditación ABET, lo cual implicó adecuaciones
+        importantes al laboratorio.
+      </Text>
+
+      <SubTitle>🖼️ Galería AREA DE TRABAJO</SubTitle>
+
+      {/* Galería con Flexbox */}
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: 2,
+          mt: 2,
+        }}
+      >
+        {[
+          { src: "images/areas.jpg", alt: "Área de Trabajo" },
+          { src: "images/1.jpg", alt: "Molino Laminador" },
+          { src: "images/2.jpg", alt: "Área de Muflas" },
+          { src: "images/3.jpg", alt: "Molino Laminador" },
+          { src: "images/4.jpg", alt: "Área de Muflas" },
+        ].map((img, index) => (
+          <Box
+            key={index}
+            sx={{
+              backgroundColor: "#ddd",
+              width: { xs: "100%", sm: "48%", md: "30%" },
+              height: "200px",
+              textAlign: "center",
+            }}
+          >
+            <ImageStyled
+              as={ImageWithFallback}
+              src={`${import.meta.env.BASE_URL}${img.src}`}
+              alt={img.alt}
+            />
+          </Box>
+        ))}
+      </Box>
     </Container>
   );
 }
