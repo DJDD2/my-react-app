@@ -113,7 +113,7 @@ export default function Home() {
       <CenteredImageBox>
         <MainImageStyled
           as={ImageWithFallback}
-          src={`${import.meta.env.BASE_URL}imagen_tec.jpeg`}
+          src={`${import.meta.env.BASE_URL}/images/imagen_tec.jpeg`}
           alt="Imagen Tec Saltillo"
         />
       </CenteredImageBox>
