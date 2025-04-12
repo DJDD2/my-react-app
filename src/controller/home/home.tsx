@@ -75,7 +75,9 @@ export default function Home() {
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src="./public/images/esctec.png" alt="Escudo ITS" />
+      
+        <img src={`${import.meta.env.BASE_URL}images/esctec.png`} alt="Imagen" />
+
       </Header>
 
       {/* 🏠 Página de Inicio */}
