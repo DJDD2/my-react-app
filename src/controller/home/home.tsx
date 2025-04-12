@@ -70,7 +70,8 @@ export default function Home() {
     <Container>
       {/* 🧭 Header */}
       <Header>
-        <Logo src="./public/images/esctec.png" alt="Logo TecNM" />
+      <Logo src={`${process.env.PUBLIC_URL}/images/esctec.png`} alt="Logo TecNM" />
+
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
