@@ -70,13 +70,13 @@ export default function Home() {
     <Container>
       {/* 🧭 Header */}
       <Header>
-      <Logo src={`${process.env.PUBLIC_URL}/images/esctec.png`} alt="Logo TecNM" />
-
+      <Logo src="my-react-app/public/tecnm.png" alt="Logo TecNM" />
+        
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-      
+        <Logo src="my-react-app/public/esctec.png" alt="Logo TecNM" />
         
       </Header>
 
@@ -84,7 +84,8 @@ export default function Home() {
       <SectionHeader>🏠 Página de Inicio</SectionHeader>
 
       <CenteredImageBox>
-        <MainImage src="my-react-app/public/1.jpg" alt="Imagen Tec Saltillo" />
+        <MainImage src="my-react-app/public/laboratorio.jpeg
+      " alt="Imagen Tec Saltillo" />
       </CenteredImageBox>
 
       {/* ✏️ Opinión General */}
