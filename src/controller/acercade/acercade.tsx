@@ -100,7 +100,7 @@ export default function AcercaDe() {
       <Header>
         <Logo
           as={ImageWithFallback}
-          src={`${import.meta.env.BASE_URL}tecnm.png`}
+          src={`${import.meta.env.BASE_URL}/tecnm.png`}
           alt="Logo TecNM"
         />
         <TitleBox>
@@ -109,7 +109,7 @@ export default function AcercaDe() {
         </TitleBox>
         <Logo
           as={ImageWithFallback}
-          src={`${import.meta.env.BASE_URL}esctec.png`}
+          src={`${import.meta.env.BASE_URL}/esctec.png`}
           alt="Escudo ITS"
         />
       </Header>

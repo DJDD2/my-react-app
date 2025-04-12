@@ -111,6 +111,70 @@ export default function Distribucion() {
       </MachineBox>
 
       {/* Resto de las secciones... */}
+
+      {/* Fundición */}
+      <MachineBox>
+        <Typography variant="h6">🔹 Fundición</Typography>
+        <Typography>Espacio acondicionado para pruebas y trabajo con metales fundidos.</Typography>
+
+        
+          {["fundicion.jpg", "fundicion2.jpg"].map((img, i) => (
+            
+              <CenteredImageBox>
+                <ImageStyled src={`./images/${img}`} alt={`Fundición ${i + 1}`} />
+                <Typography align="center" variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
+                  Imagen del área de fundición
+                </Typography>
+              </CenteredImageBox>
+            
+          ))}
+       
+      </MachineBox>
+
+      {/* Ensayos mecánicos */}
+      <MachineBox>
+        <Typography variant="h6">🔹 Ensayos mecánicos</Typography>
+        <CenteredImageBox>
+          <ImageStyled src="images/A.jpg" alt="Zona de ensayos mecánicos" />
+          <Typography variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
+            Maquinaria utilizada para pruebas de resistencia de materiales
+          </Typography>
+        </CenteredImageBox>
+      </MachineBox>
+
+      {/* Seguridad y equipo de protección */}
+      <MachineBox>
+        <Typography variant="h6">🔹 Seguridad y equipo de protección</Typography>
+        <Typography>Espacio designado para resguardo de estudiantes y equipo de protección personal.</Typography>
+        <CenteredImageBox>
+          <ImageStyled src="images/herramienta.jpg" alt="Equipo de protección" />
+          <Typography variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
+            Herramientas y equipo de protección disponibles
+          </Typography>
+        </CenteredImageBox>
+      </MachineBox>
+
+      {/* Zona de hornos */}
+      <MachineBox>
+        <Typography variant="h6">🔹 Zona de hornos (muflas)</Typography>
+        <CenteredImageBox>
+          <ImageStyled src="images/escri.jpg" alt="Zona de hornos" />
+          <Typography variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
+            Área donde se ubican los hornos para tratamientos térmicos
+          </Typography>
+        </CenteredImageBox>
+      </MachineBox>
+
+      {/* Laminación */}
+      <MachineBox>
+        <Typography variant="h6">🔹 Laminación</Typography>
+        <CenteredImageBox>
+          <ImageStyled src="images/B.jpg" alt="Zona de laminación" />
+          <Typography variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
+            Equipo utilizado para reducir el espesor del material
+          </Typography>
+        </CenteredImageBox>
+      </MachineBox>
     </Container>
   );
 }

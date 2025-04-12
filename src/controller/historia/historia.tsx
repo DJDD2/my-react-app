@@ -108,18 +108,18 @@ const LaboratorioPage: React.FC = () => {
     <Container>
       {/* Header */}
       <Header>
-        <Logo src="images/tecnm.png" alt="Logo TecNM" />
+        <Logo src={`${import.meta.env.BASE_URL}/tecnm.png`} alt="Logo TecNM" />
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src="images/esctec.png" alt="Escudo ITS" />
+        <Logo src={`${import.meta.env.BASE_URL}/esctec.png`} alt="Escudo ITS" />
       </Header>
 
       {/* Título principal */}
       <SectionHeader>🏠 Laboratorio de Metalurgia</SectionHeader>
       <CenteredImageBox>
-        <MainImage src="images/laboratorio.jpeg" alt="Imagen del laboratorio" />
+        <MainImage src={`${import.meta.env.BASE_URL}images/laboratorio.jpeg`} alt="Imagen del laboratorio" />
       </CenteredImageBox>
 
       {/* Misión / Visión */}
@@ -128,14 +128,14 @@ const LaboratorioPage: React.FC = () => {
           🎯 Misión
         </Typography>
         <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-          Formar profesionales altamente capacitados en el área de metalurgia, a través de prácticas de laboratorio que promuevan el conocimiento, la innovación y el uso responsable de los recursos metálicos para el desarrollo industrial sostenible.
+          Formar profesionales altamente capacitados en el área de metalurgia...
         </Typography>
 
         <Typography variant="h6" color="primary" sx={{ marginTop: "1.5rem" }}>
           🎯 Visión
         </Typography>
         <Typography variant="body1">
-          Ser un laboratorio de referencia en educación y desarrollo tecnológico en el campo de la metalurgia, reconocido por su infraestructura, seguridad, compromiso académico y contribución a la investigación aplicada y al fortalecimiento del sector industrial.
+          Ser un laboratorio de referencia en educación y desarrollo tecnológico...
         </Typography>
       </ContentBox>
 
@@ -143,7 +143,7 @@ const LaboratorioPage: React.FC = () => {
       <ContentBox>
         <HistoriaTitle>📘 REGLAMENTO DEL LABORATORIO</HistoriaTitle>
         <CenteredImageBox>
-          <MainImage src="./images/reglamento.JPG" alt="Normas visibles dentro del laboratorio" />
+          <MainImage src={`${import.meta.env.BASE_URL}images/reglamento.JPG`} alt="Normas visibles dentro del laboratorio" />
         </CenteredImageBox>
         <Typography align="center" variant="body2" sx={{ color: "#666", marginBottom: "2rem" }}>
           Ejemplo del reglamento colocado en el laboratorio
@@ -154,7 +154,7 @@ const LaboratorioPage: React.FC = () => {
       <ContentBox>
         <HistoriaTitle>📘 Historia del Laboratorio</HistoriaTitle>
         <HistoriaText>
-          El laboratorio originalmente fue diseñado para dar soporte a la Ingeniería en Metalurgia. Con el paso del tiempo, su enfoque se ha ampliado para brindar soporte en tres áreas fundamentales:
+          El laboratorio originalmente fue diseñado para dar soporte a la Ingeniería en Metalurgia...
         </HistoriaText>
         <ul>
           <li><HistoriaText>🔧 Soporte en Ingeniería en Materiales</HistoriaText></li>
@@ -167,7 +167,7 @@ const LaboratorioPage: React.FC = () => {
       <ContentBox>
         <HistoriaSubTitle>📚 Materias Relacionadas</HistoriaSubTitle>
         <HistoriaText>
-          Aproximadamente el 70% de los contenidos de la materia de Materiales están directamente relacionados con la metalurgia. Por ello, los estudiantes visitan el laboratorio para realizar:
+          Aproximadamente el 70% de los contenidos de la materia de Materiales están directamente relacionados...
         </HistoriaText>
         <ul>
           <li><HistoriaText>🧪 Experimentación</HistoriaText></li>
@@ -182,7 +182,7 @@ const LaboratorioPage: React.FC = () => {
         <ul>
           <li><HistoriaText>Metales</HistoriaText></li>
           <CenteredImageBox>
-            <MainImage src="./images/metal.png" alt="Ejemplo de Metales" />
+            <MainImage src={`${import.meta.env.BASE_URL}images/metal.png`} alt="Ejemplo de Metales" />
           </CenteredImageBox>
           <Typography align="center" variant="body2" sx={{ color: "#666", marginBottom: "2rem" }}>
             Ejemplo de Metales
@@ -190,7 +190,7 @@ const LaboratorioPage: React.FC = () => {
 
           <li><HistoriaText>Polímeros</HistoriaText></li>
           <CenteredImageBox>
-            <MainImage src="./images/polimero.jpg" alt="Ejemplo de Polímeros" />
+            <MainImage src={`${import.meta.env.BASE_URL}images/polimero.jpg`} alt="Ejemplo de Polímeros" />
           </CenteredImageBox>
           <Typography align="center" variant="body2" sx={{ color: "#666", marginBottom: "2rem" }}>
             Ejemplo de Polímeros
@@ -198,7 +198,7 @@ const LaboratorioPage: React.FC = () => {
 
           <li><HistoriaText>Cerámicas</HistoriaText></li>
           <CenteredImageBox>
-            <MainImage src="./images/ceramica.jpg" alt="Ejemplo de Cerámicas" />
+            <MainImage src={`${import.meta.env.BASE_URL}images/ceramica.jpg`} alt="Ejemplo de Cerámicas" />
           </CenteredImageBox>
           <Typography align="center" variant="body2" sx={{ color: "#666", marginBottom: "2rem" }}>
             Ejemplo de Cerámicas
@@ -207,7 +207,7 @@ const LaboratorioPage: React.FC = () => {
 
         <HistoriaSubTitle>👥 Estudiantes</HistoriaSubTitle>
         <HistoriaText>
-          Cada semestre, más de 4200 estudiantes hacen uso del laboratorio de materiales para complementar su formación académica.
+          Cada semestre, más de 4200 estudiantes hacen uso del laboratorio de materiales...
         </HistoriaText>
 
         <HistoriaText sx={{ marginTop: "2rem", fontStyle: "italic", color: "#999" }}>
