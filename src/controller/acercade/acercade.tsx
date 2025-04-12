@@ -84,7 +84,7 @@ function ImageWithFallback({ src, alt, ...props }: any) {
   );
 }
 
-export default function Home() {
+export default function acercade() {
   return (
     <Container>
       {/* 🧭 Header */}
