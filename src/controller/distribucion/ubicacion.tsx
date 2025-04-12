@@ -62,12 +62,18 @@ export default function Ubicacion() {
     <Container>
       {/* 🧭 Header */}
       <Header>
-        <Logo src="images/tecnm.png" alt="Logo TecNM" />
+        <Logo
+          src={`${import.meta.env.BASE_URL}tecnm.png`}
+          alt="Logo TecNM"
+        />
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src="images/esctec.png" alt="Escudo ITS" />
+        <Logo
+          src={`${import.meta.env.BASE_URL}esctec.png`}
+          alt="Escudo ITS"
+        />
       </Header>
 
       <Title>📍 Ubicación del Taller</Title>
@@ -79,7 +85,10 @@ export default function Ubicacion() {
       </Description>
 
       {/* Imagen del croquis o entrada */}
-      <ImageStyled src="../src/controller/distribucion/ubicacion.png" alt="Entrada al taller" />
+      <ImageStyled
+        src={`${import.meta.env.BASE_URL}images/ubicacion.png`} // Asegúrate que la imagen esté en la carpeta correcta
+        alt="Entrada al taller"
+      />
 
       {/* Mapa embebido */}
       <MapContainer

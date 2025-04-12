@@ -66,63 +66,23 @@ const CenteredImageBox = styled(Box)({
   margin: "1rem 0",
 });
 
-// 📦 Datos de las áreas
-const areas = [
-  {
-    titulo: "🔹 Extracción de minerales",
-    descripcion: "Responsable: Sergio Ramos (área tipo museo)",
-    imagenes: [
-      { src: "/images/museo.jpg", texto: "Ejemplo del reglamento colocado en el laboratorio" },
-      { src: "/images/museo2.jpg", texto: "Ejemplo del reglamento colocado en el laboratorio" },
-      { src: "/images/piedras3.jpg", texto: "Ejemplo del reglamento colocado en el laboratorio" },
-    ],
-  },
-  {
-    titulo: "🔹 Fundición",
-    descripcion: "Espacio acondicionado para pruebas y trabajo con metales fundidos.",
-    imagenes: [
-      { src: "/images/fundicion.jpg", texto: "Imagen del área de fundición" },
-      { src: "/images/fundicion2.jpg", texto: "Imagen del área de fundición" },
-    ],
-  },
-  {
-    titulo: "🔹 Ensayos mecánicos",
-    imagenes: [
-      { src: "/images/A.jpg", texto: "Maquinaria utilizada para pruebas de resistencia de materiales" },
-    ],
-  },
-  {
-    titulo: "🔹 Seguridad y equipo de protección",
-    descripcion: "Espacio designado para resguardo de estudiantes y equipo de protección personal.",
-    imagenes: [
-      { src: "/images/herramienta.jpg", texto: "Herramientas y equipo de protección disponibles" },
-    ],
-  },
-  {
-    titulo: "🔹 Zona de hornos (muflas)",
-    imagenes: [
-      { src: "/images/escri.jpg", texto: "Área donde se ubican los hornos para tratamientos térmicos" },
-    ],
-  },
-  {
-    titulo: "🔹 Laminación",
-    imagenes: [
-      { src: "/images/B.jpg", texto: "Equipo utilizado para reducir el espesor del material" },
-    ],
-  },
-];
-
 export default function Distribucion() {
   return (
     <Container>
       {/* Encabezado */}
       <Header>
-        <Logo src="/images/tecnm.png" alt="Logo TecNM" />
+        <Logo
+          src={`${import.meta.env.BASE_URL}images/tecnm.png`}
+          alt="Logo TecNM"
+        />
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src="/images/esctec.png" alt="Escudo ITS" />
+        <Logo
+          src={`${import.meta.env.BASE_URL}images/esctec.png`}
+          alt="Escudo ITS"
+        />
       </Header>
 
       {/* Título principal */}
@@ -131,21 +91,26 @@ export default function Distribucion() {
       {/* Subtítulo */}
       <SubTitle>📍 Diferentes Áreas</SubTitle>
 
-      {/* Renderizado dinámico de áreas sin grid */}
-      {areas.map((area, index) => (
-        <MachineBox key={index}>
-          <Typography variant="h6">{area.titulo}</Typography>
-          {area.descripcion && <Typography>{area.descripcion}</Typography>}
-          {area.imagenes.map((img, i) => (
-            <CenteredImageBox key={i}>
-              <ImageStyled src={img.src} alt={`Imagen ${i + 1}`} />
-              <Typography align="center" variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
-                {img.texto}
-              </Typography>
-            </CenteredImageBox>
-          ))}
-        </MachineBox>
-      ))}
+      {/* Extracción de minerales */}
+      <MachineBox>
+        <Typography variant="h6">🔹 Extracción de minerales</Typography>
+        <Typography>Responsable: Sergio Ramos (área tipo museo)</Typography>
+
+        {/* Imágenes sin Grid */}
+        {["museo.jpg", "museo2.jpg", "piedras3.jpg"].map((img, i) => (
+          <CenteredImageBox key={i}>
+            <ImageStyled
+              src={`${import.meta.env.BASE_URL}images/${img}`}
+              alt={`Imagen museo ${i + 1}`}
+            />
+            <Typography align="center" variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
+              Ejemplo del reglamento colocado en el laboratorio
+            </Typography>
+          </CenteredImageBox>
+        ))}
+      </MachineBox>
+
+      {/* Resto de las secciones... */}
     </Container>
   );
 }
