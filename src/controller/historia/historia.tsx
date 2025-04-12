@@ -120,7 +120,7 @@ const LaboratorioPage: React.FC = () => {
       <SectionHeader>🏠 Laboratorio de Metalurgia</SectionHeader>
       <CenteredImageBox>
         <MainImage
-          src={`${import.meta.env.BASE_URL}images/laboratorio.jpeg`}
+          src={`${import.meta.env.BASE_URL}/laboratorio.jpeg`}
           alt="Imagen del laboratorio de metalurgia"
         />
       </CenteredImageBox>

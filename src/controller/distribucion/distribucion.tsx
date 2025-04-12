@@ -66,112 +66,90 @@ const CenteredImageBox = styled(Box)({
   margin: "1rem 0",
 });
 
-// Helper para las rutas de imágenes
 const imageUrl = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
+
+// 🧠 Datos de áreas
+const secciones = [
+  {
+    titulo: "🔹 Extracción de minerales",
+    descripcion: "Responsable: Sergio Ramos (área tipo museo)",
+    imagenes: ["museo.jpg", "museo2.jpg", "piedras3.jpg"],
+    nota: "Ejemplo del reglamento colocado en el laboratorio",
+  },
+  {
+    titulo: "🔹 Fundición",
+    descripcion: "Espacio acondicionado para pruebas y trabajo con metales fundidos.",
+    imagenes: ["fundicion.jpg", "fundicion2.jpg"],
+    nota: "Imagen del área de fundición",
+  },
+  {
+    titulo: "🔹 Ensayos mecánicos",
+    imagenes: ["A.jpg"],
+    nota: "Maquinaria utilizada para pruebas de resistencia de materiales",
+  },
+  {
+    titulo: "🔹 Seguridad y equipo de protección",
+    descripcion:
+      "Espacio designado para resguardo de estudiantes y equipo de protección personal.",
+    imagenes: ["herramienta.jpg"],
+    nota: "Herramientas y equipo de protección disponibles",
+  },
+  {
+    titulo: "🔹 Zona de hornos (muflas)",
+    imagenes: ["escri.jpg"],
+    nota: "Área donde se ubican los hornos para tratamientos térmicos",
+  },
+  {
+    titulo: "🔹 Laminación",
+    imagenes: ["B.jpg"],
+    nota: "Equipo utilizado para reducir el espesor del material",
+  },
+];
 
 export default function Distribucion() {
   return (
     <Container>
       {/* Encabezado */}
       <Header>
-        <Logo src={imageUrl("tecnm.png")} alt="Logo TecNM" />
+        <Logo
+         
+          src={`${import.meta.env.BASE_URL}/tecnm.png`}
+          alt="Logo TecNM"
+        />
         <TitleBox>
           <TitleText>TECNOLOGICO NACIONAL DE MÉXICO</TitleText>
           <TitleText>INSTITUTO TECNOLÓGICO DE SALTILLO</TitleText>
         </TitleBox>
-        <Logo src={imageUrl("esctec.png")} alt="Escudo ITS" />
+        <Logo
+          
+          src={`${import.meta.env.BASE_URL}/esctec.png`}
+          alt="Escudo ITS"
+        />
       </Header>
 
       {/* Título principal */}
       <Title>🏭 Áreas y Equipos del Taller</Title>
-
-      {/* Subtítulo */}
       <SubTitle>📍 Diferentes Áreas</SubTitle>
 
-      {/* Extracción de minerales */}
-      <MachineBox>
-        <Typography variant="h6">🔹 Extracción de minerales</Typography>
-        <Typography>Responsable: Sergio Ramos (área tipo museo)</Typography>
-        {["museo.jpg", "museo2.jpg", "piedras3.jpg"].map((img, i) => (
-          <CenteredImageBox key={i}>
-            <ImageStyled src={imageUrl(img)} alt={`Imagen museo ${i + 1}`} />
-            <Typography
-              align="center"
-              variant="body2"
-              sx={{ color: "#555", marginTop: "0.5rem" }}
-            >
-              Ejemplo del reglamento colocado en el laboratorio
-            </Typography>
-          </CenteredImageBox>
-        ))}
-      </MachineBox>
-
-      {/* Fundición */}
-      <MachineBox>
-        <Typography variant="h6">🔹 Fundición</Typography>
-        <Typography>
-          Espacio acondicionado para pruebas y trabajo con metales fundidos.
-        </Typography>
-        {["fundicion.jpg", "fundicion2.jpg"].map((img, i) => (
-          <CenteredImageBox key={i}>
-            <ImageStyled src={imageUrl(img)} alt={`Fundición ${i + 1}`} />
-            <Typography
-              align="center"
-              variant="body2"
-              sx={{ color: "#555", marginTop: "0.5rem" }}
-            >
-              Imagen del área de fundición
-            </Typography>
-          </CenteredImageBox>
-        ))}
-      </MachineBox>
-
-      {/* Ensayos mecánicos */}
-      <MachineBox>
-        <Typography variant="h6">🔹 Ensayos mecánicos</Typography>
-        <CenteredImageBox>
-          <ImageStyled src={imageUrl("A.jpg")} alt="Zona de ensayos mecánicos" />
-          <Typography variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
-            Maquinaria utilizada para pruebas de resistencia de materiales
-          </Typography>
-        </CenteredImageBox>
-      </MachineBox>
-
-      {/* Seguridad y equipo de protección */}
-      <MachineBox>
-        <Typography variant="h6">🔹 Seguridad y equipo de protección</Typography>
-        <Typography>
-          Espacio designado para resguardo de estudiantes y equipo de protección personal.
-        </Typography>
-        <CenteredImageBox>
-          <ImageStyled src={imageUrl("herramienta.jpg")} alt="Equipo de protección" />
-          <Typography variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
-            Herramientas y equipo de protección disponibles
-          </Typography>
-        </CenteredImageBox>
-      </MachineBox>
-
-      {/* Zona de hornos */}
-      <MachineBox>
-        <Typography variant="h6">🔹 Zona de hornos (muflas)</Typography>
-        <CenteredImageBox>
-          <ImageStyled src={imageUrl("escri.jpg")} alt="Zona de hornos" />
-          <Typography variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
-            Área donde se ubican los hornos para tratamientos térmicos
-          </Typography>
-        </CenteredImageBox>
-      </MachineBox>
-
-      {/* Laminación */}
-      <MachineBox>
-        <Typography variant="h6">🔹 Laminación</Typography>
-        <CenteredImageBox>
-          <ImageStyled src={imageUrl("B.jpg")} alt="Zona de laminación" />
-          <Typography variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
-            Equipo utilizado para reducir el espesor del material
-          </Typography>
-        </CenteredImageBox>
-      </MachineBox>
+      {/* Secciones dinámicas */}
+      {secciones.map((seccion, index) => (
+        <MachineBox key={index}>
+          <Typography variant="h6">{seccion.titulo}</Typography>
+          {seccion.descripcion && <Typography>{seccion.descripcion}</Typography>}
+          {seccion.imagenes.map((img, i) => (
+            <CenteredImageBox key={i}>
+              <ImageStyled src={imageUrl(img)} alt={`${seccion.titulo} ${i + 1}`} />
+              <Typography
+                align="center"
+                variant="body2"
+                sx={{ color: "#555", marginTop: "0.5rem" }}
+              >
+                {seccion.nota}
+              </Typography>
+            </CenteredImageBox>
+          ))}
+        </MachineBox>
+      ))}
     </Container>
   );
 }
